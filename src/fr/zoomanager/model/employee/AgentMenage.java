@@ -4,10 +4,10 @@ import fr.zoomanager.model.enclos.Enclos;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Gardien extends Employee {
+public class AgentMenage extends Employee {
     private List<Enclos> assignedEnclos;
 
-    public Gardien(String name, double salary) {
+    public AgentMenage(String name, double salary) {
         super(name, salary);
         this.assignedEnclos = new ArrayList<>();
     }

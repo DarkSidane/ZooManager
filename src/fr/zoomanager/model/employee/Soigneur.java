@@ -17,27 +17,26 @@ public class Soigneur extends Employee {
         specialties.add(species);
     }
 
-    // Ajout de la méthode getSpecialties
     public List<Species> getSpecialties() {
-        return new ArrayList<>(specialties);  // Retourne une copie défensive
+        return new ArrayList<>(specialties);
     }
 
     public void healAnimal(Animal animal) {
         if (specialties.contains(animal.getSpecies())) {
             animal.heal();
-            System.out.println(name + " soigne " + animal.getName());
+            System.out.println(this.getName() + " soigne " + animal.getName());
         }
     }
 
     public void feedAnimal(Animal animal) {
         if (specialties.contains(animal.getSpecies())) {
             animal.feed();
-            System.out.println(name + " nourrit " + animal.getName());
+            System.out.println(this.getName() + " nourrit " + animal.getName());
         }
     }
 
     @Override
     public void work() {
-        System.out.println(name + " effectue sa tournée de soins");
+        System.out.println(this.getName() + " effectue sa tournée de soins");
     }
 }

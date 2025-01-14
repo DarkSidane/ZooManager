@@ -1,3 +1,10 @@
+#!/bin/bash
+
+# Assurez-vous que le dossier existe
+mkdir -p src/fr/zoomanager/controller
+
+# Création de ZooController.java avec son contenu complet
+cat > "src/fr/zoomanager/controller/ZooController.java" << 'EOL'
 package fr.zoomanager.controller;
 
 import fr.zoomanager.model.Zoo;
@@ -578,3 +585,6 @@ public class ZooController {
         }
     }
 }
+EOL
+
+echo "✅ Le fichier ZooController.java a été créé avec succès!"
