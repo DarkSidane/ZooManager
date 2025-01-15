@@ -1,0 +1,42 @@
+classDiagram
+    class Zoo {
+        -Budget budget
+        +getBudget()
+    }
+
+    class Budget {
+        -double balance
+        -List~Transaction~ transactions
+        +addTransaction(Transaction)
+        +getBalance()
+        +getTransactions()
+        +generateReport()
+    }
+
+    class Transaction {
+        -double amount
+        -String description
+        -LocalDateTime date
+        -TransactionType type
+        +getAmount()
+        +getDescription()
+        +getDate()
+        +getType()
+        +toString()
+    }
+
+    class TransactionType {
+        <<enumeration>>
+        INCOME
+        EXPENSE
+        -String symbol
+        +getSymbol()
+    }
+
+    Zoo --> "1" Budget : has
+    Budget --> "*" Transaction : contains
+    Transaction --> TransactionType : has
+
+    note for Budget "Gère la balance financière\net l'historique des transactions"
+    note for Transaction "Représente une opération financière\nEntrée ou sortie d'argent"
+    note for TransactionType "Définit le type de transaction\navec son symbole monétaire"
