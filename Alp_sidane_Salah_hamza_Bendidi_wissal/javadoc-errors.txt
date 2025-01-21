@@ -1,0 +1,383 @@
+Loading source files for package fr.zoomanager...
+Constructing Javadoc information...
+Building index for all the packages and classes...
+Standard Doclet version 17.0.13+11-Debian-2deb12u1
+Building tree for all the packages and classes...
+Generating doc/fr/zoomanager/model/employee/AgentMenage.html...
+src/fr/zoomanager/model/employee/AgentMenage.java:7: warning: no comment
+public class AgentMenage extends Employee {
+       ^
+src/fr/zoomanager/model/employee/AgentMenage.java:10: warning: no comment
+    public AgentMenage(String name, double salary) {
+           ^
+src/fr/zoomanager/model/employee/AgentMenage.java:15: warning: no comment
+    public void assignEnclos(Enclos enclos) {
+                ^
+src/fr/zoomanager/model/employee/AgentMenage.java:19: warning: no comment
+    public void cleanEnclos(Enclos enclos) {
+                ^
+src/fr/zoomanager/model/employee/Employee.java:12: warning: no comment
+    public abstract void work();
+                         ^
+Generating doc/fr/zoomanager/model/animal/Animal.html...
+src/fr/zoomanager/model/animal/Animal.java:3: warning: no comment
+public abstract class Animal {
+                ^
+src/fr/zoomanager/model/animal/Animal.java:5: warning: no comment
+    protected double health;
+                     ^
+src/fr/zoomanager/model/animal/Animal.java:6: warning: no comment
+    protected double hunger;
+                     ^
+src/fr/zoomanager/model/animal/Animal.java:4: warning: no comment
+    protected String name;
+                     ^
+src/fr/zoomanager/model/animal/Animal.java:7: warning: no comment
+    protected Species species;
+                      ^
+src/fr/zoomanager/model/animal/Animal.java:9: warning: no comment
+    public Animal(String name, Species species) {
+           ^
+src/fr/zoomanager/model/animal/Animal.java:16: warning: no comment
+    public void feed() {
+                ^
+src/fr/zoomanager/model/animal/Animal.java:28: warning: no comment
+    public double getHealth() {
+                  ^
+src/fr/zoomanager/model/animal/Animal.java:32: warning: no comment
+    public double getHunger() {
+                  ^
+src/fr/zoomanager/model/animal/Animal.java:24: warning: no comment
+    public String getName() {
+                  ^
+src/fr/zoomanager/model/animal/Animal.java:36: warning: no comment
+    public Species getSpecies() {
+                   ^
+src/fr/zoomanager/model/animal/Animal.java:42: warning: no comment
+    public String getStatus() {
+                  ^
+src/fr/zoomanager/model/animal/Animal.java:20: warning: no comment
+    public void heal() {
+                ^
+src/fr/zoomanager/model/animal/Animal.java:40: warning: no comment
+    public abstract String makeSound();
+                           ^
+src/fr/zoomanager/model/animal/Animal.java:47: warning: no comment
+    public void updateState() {
+                ^
+Generating doc/fr/zoomanager/model/financial/Budget.html...
+src/fr/zoomanager/model/financial/Budget.java:6: warning: no comment
+public class Budget {
+       ^
+src/fr/zoomanager/model/financial/Budget.java:10: warning: no comment
+    public Budget() {
+           ^
+src/fr/zoomanager/model/financial/Budget.java:15: warning: no comment
+    public void addTransaction(Transaction transaction) {
+                ^
+src/fr/zoomanager/model/financial/Budget.java:28: warning: no comment
+    public String generateReport() {
+                  ^
+src/fr/zoomanager/model/financial/Budget.java:20: warning: no comment
+    public double getBalance() {
+                  ^
+src/fr/zoomanager/model/financial/Budget.java:24: warning: no comment
+    public List<Transaction> getTransactions() {
+                             ^
+Generating doc/fr/zoomanager/view/ConsoleView.html...
+src/fr/zoomanager/view/ConsoleView.java:13: warning: no comment
+public class ConsoleView {
+       ^
+src/fr/zoomanager/view/ConsoleView.java:26: warning: no comment
+    public ConsoleView() {
+           ^
+src/fr/zoomanager/view/ConsoleView.java:195: warning: no comment
+    public void displayAllEmployees(Zoo zoo) {
+                ^
+src/fr/zoomanager/view/ConsoleView.java:178: warning: no comment
+    public void displayAllEnclos(Zoo zoo) {
+                ^
+src/fr/zoomanager/view/ConsoleView.java:109: warning: no comment
+    public void displayAnimalMenu() {
+                ^
+src/fr/zoomanager/view/ConsoleView.java:53: warning: no comment
+    public void displayEmployeeLoginMenu(List<Employee> employees) {
+                ^
+src/fr/zoomanager/view/ConsoleView.java:119: warning: no comment
+    public void displayEmployeeMenu() {
+                ^
+src/fr/zoomanager/view/ConsoleView.java:100: warning: no comment
+    public void displayEnclosMenu() {
+                ^
+src/fr/zoomanager/view/ConsoleView.java:149: warning: no comment
+    public void displayEnclosStatus(Enclos enclos) {
+                ^
+src/fr/zoomanager/view/ConsoleView.java:136: warning: no comment
+    public void displayError(String message) {
+                ^
+src/fr/zoomanager/view/ConsoleView.java:45: warning: no comment
+    public void displayLoginMenu() {
+                ^
+src/fr/zoomanager/view/ConsoleView.java:66: warning: no comment
+    public void displayMainMenu(Role role) {
+                ^
+src/fr/zoomanager/view/ConsoleView.java:132: warning: no comment
+    public void displayMessage(String message) {
+                ^
+src/fr/zoomanager/view/ConsoleView.java:30: warning: no comment
+    public void displayUserStatus(User currentUser) {
+                ^
+src/fr/zoomanager/view/ConsoleView.java:140: warning: no comment
+    public void displayZooStatus(Zoo zoo) {
+                ^
+src/fr/zoomanager/view/ConsoleView.java:128: warning: no comment
+    public String getUserInput() {
+                  ^
+Generating doc/fr/zoomanager/model/employee/Employee.html...
+src/fr/zoomanager/model/employee/Employee.java:3: warning: no comment
+public abstract class Employee {
+                ^
+src/fr/zoomanager/model/employee/Employee.java:4: warning: no comment
+    protected String name;
+                     ^
+src/fr/zoomanager/model/employee/Employee.java:5: warning: no comment
+    protected double salary;
+                     ^
+src/fr/zoomanager/model/employee/Employee.java:7: warning: no comment
+    public Employee(String name, double salary) {
+           ^
+src/fr/zoomanager/model/employee/Employee.java:18: warning: no comment
+    public String getName() {
+                  ^
+src/fr/zoomanager/model/employee/Employee.java:14: warning: no comment
+    public double getSalary() {
+                  ^
+Generating doc/fr/zoomanager/model/enclos/Enclos.html...
+src/fr/zoomanager/model/enclos/Enclos.java:7: warning: no comment
+public class Enclos {
+       ^
+src/fr/zoomanager/model/enclos/Enclos.java:13: warning: no comment
+    public Enclos(String name, int capacity) {
+           ^
+src/fr/zoomanager/model/enclos/Enclos.java:20: warning: no comment
+    public void addAnimal(Animal animal) {
+                ^
+src/fr/zoomanager/model/enclos/Enclos.java:30: warning: no comment
+    public void clean() {
+                ^
+src/fr/zoomanager/model/enclos/Enclos.java:49: warning: no comment
+    public List<Animal> getAnimals() {
+                        ^
+src/fr/zoomanager/model/enclos/Enclos.java:53: warning: no comment
+    public double getCleanliness() {
+                  ^
+src/fr/zoomanager/model/enclos/Enclos.java:45: warning: no comment
+    public String getName() {
+                  ^
+src/fr/zoomanager/model/enclos/Enclos.java:57: warning: no comment
+    public String getStatus() {
+                  ^
+src/fr/zoomanager/model/enclos/Enclos.java:34: warning: no comment
+    public boolean needsCleaning() {
+                   ^
+src/fr/zoomanager/model/enclos/Enclos.java:26: warning: no comment
+    public void removeAnimal(Animal animal) {
+                ^
+src/fr/zoomanager/model/enclos/Enclos.java:38: warning: no comment
+    public void updateState() {
+                ^
+Generating doc/fr/zoomanager/model/animal/FlamantRose.html...
+src/fr/zoomanager/model/animal/FlamantRose.java:3: warning: no comment
+public class FlamantRose extends Oiseau {
+       ^
+src/fr/zoomanager/model/animal/FlamantRose.java:7: warning: no comment
+    public FlamantRose(String name, double wingspan, String plumageColor) {
+           ^
+src/fr/zoomanager/model/animal/FlamantRose.java:23: warning: no comment
+    public void filter() {
+                ^
+src/fr/zoomanager/model/animal/FlamantRose.java:18: warning: no comment
+    public void standOneLeg() {
+                ^
+Generating doc/fr/zoomanager/model/animal/Lion.html...
+src/fr/zoomanager/model/animal/Lion.java:3: warning: no comment
+public class Lion extends Mammifere {
+       ^
+src/fr/zoomanager/model/animal/Lion.java:7: warning: no comment
+    public Lion(String name, int prideSize, boolean isAlpha) {
+           ^
+src/fr/zoomanager/model/animal/Lion.java:18: warning: no comment
+    public void hunt() {
+                ^
+src/fr/zoomanager/model/animal/Mammifere.java:13: warning: no comment
+    public abstract void reproduce();
+                         ^
+Generating doc/fr/zoomanager/Main.html...
+src/fr/zoomanager/Main.java:7: warning: no comment
+public class Main {
+       ^
+src/fr/zoomanager/Main.java:8: warning: no comment
+    public static void main(String[] args) {
+                       ^
+Generating doc/fr/zoomanager/model/animal/Mammifere.html...
+src/fr/zoomanager/model/animal/Mammifere.java:3: warning: no comment
+public abstract class Mammifere extends Animal {
+                ^
+src/fr/zoomanager/model/animal/Mammifere.java:5: warning: no comment
+    protected int gestationPeriod;
+                  ^
+src/fr/zoomanager/model/animal/Mammifere.java:4: warning: no comment
+    protected boolean isNocturnal;
+                      ^
+src/fr/zoomanager/model/animal/Mammifere.java:7: warning: no comment
+    public Mammifere(String name, Species species, boolean isNocturnal, int gestationPeriod) {
+           ^
+Generating doc/fr/zoomanager/model/animal/Oiseau.html...
+src/fr/zoomanager/model/animal/Oiseau.java:3: warning: no comment
+public abstract class Oiseau extends Animal {
+                ^
+src/fr/zoomanager/model/animal/Oiseau.java:5: warning: no comment
+    protected boolean canFly;
+                      ^
+src/fr/zoomanager/model/animal/Oiseau.java:4: warning: no comment
+    protected double wingspan;
+                     ^
+src/fr/zoomanager/model/animal/Oiseau.java:7: warning: no comment
+    public Oiseau(String name, Species species, double wingspan, boolean canFly) {
+           ^
+src/fr/zoomanager/model/animal/Oiseau.java:13: warning: no comment
+    public void fly() {
+                ^
+Generating doc/fr/zoomanager/model/animal/Pelican.html...
+src/fr/zoomanager/model/animal/Pelican.java:3: warning: no comment
+public class Pelican extends Oiseau {
+       ^
+src/fr/zoomanager/model/animal/Pelican.java:7: warning: no comment
+    public Pelican(String name, double wingspan, double beakSize, double pouchCapacity) {
+           ^
+src/fr/zoomanager/model/animal/Pelican.java:18: warning: no comment
+    public void fish() {
+                ^
+Generating doc/fr/zoomanager/model/user/Role.html...
+src/fr/zoomanager/model/user/Role.java:3: warning: no comment
+public enum Role {
+       ^
+src/fr/zoomanager/model/user/Role.java:6: warning: no comment
+    AGENT_MENAGE("Agent de ménage");
+    ^
+src/fr/zoomanager/model/user/Role.java:4: warning: no comment
+    DIRECTEUR("Directeur"),
+    ^
+src/fr/zoomanager/model/user/Role.java:5: warning: no comment
+    SOIGNEUR("Soigneur"),
+    ^
+Generating doc/fr/zoomanager/model/employee/Soigneur.html...
+src/fr/zoomanager/model/employee/Soigneur.java:8: warning: no comment
+public class Soigneur extends Employee {
+       ^
+src/fr/zoomanager/model/employee/Soigneur.java:11: warning: no comment
+    public Soigneur(String name, double salary) {
+           ^
+src/fr/zoomanager/model/employee/Soigneur.java:16: warning: no comment
+    public void addSpecialty(Species species) {
+                ^
+src/fr/zoomanager/model/employee/Soigneur.java:31: warning: no comment
+    public void feedAnimal(Animal animal) {
+                ^
+src/fr/zoomanager/model/employee/Soigneur.java:20: warning: no comment
+    public List<Species> getSpecialties() {
+                         ^
+src/fr/zoomanager/model/employee/Soigneur.java:24: warning: no comment
+    public void healAnimal(Animal animal) {
+                ^
+Generating doc/fr/zoomanager/model/animal/Species.html...
+src/fr/zoomanager/model/animal/Species.java:3: warning: no comment
+public enum Species {
+       ^
+src/fr/zoomanager/model/animal/Species.java:7: warning: no comment
+    FLAMANT_ROSE("Flamant Rose");
+    ^
+src/fr/zoomanager/model/animal/Species.java:4: warning: no comment
+    LION("Lion"),
+    ^
+src/fr/zoomanager/model/animal/Species.java:6: warning: no comment
+    PELICAN("Pélican"),
+    ^
+src/fr/zoomanager/model/animal/Species.java:5: warning: no comment
+    ZEBRE("Zèbre"),
+    ^
+Generating doc/fr/zoomanager/model/financial/Transaction.html...
+src/fr/zoomanager/model/financial/Transaction.java:6: warning: no comment
+public class Transaction {
+       ^
+src/fr/zoomanager/model/financial/Transaction.java:12: warning: no comment
+    public Transaction(double amount, String description, TransactionType type) {
+           ^
+src/fr/zoomanager/model/financial/Transaction.java:19: warning: no comment
+    public double getAmount() {
+                  ^
+src/fr/zoomanager/model/financial/Transaction.java:27: warning: no comment
+    public LocalDateTime getDate() {
+                         ^
+Generating doc/fr/zoomanager/model/financial/TransactionType.html...
+Generating doc/fr/zoomanager/model/user/User.html...
+Generating doc/fr/zoomanager/model/animal/Zebre.html...
+Generating doc/fr/zoomanager/model/Zoo.html...
+Generating doc/fr/zoomanager/controller/ZooController.html...
+Generating doc/fr/zoomanager/package-summary.html...
+Generating doc/fr/zoomanager/package-tree.html...
+Generating doc/fr/zoomanager/controller/package-summary.html...
+Generating doc/fr/zoomanager/controller/package-tree.html...
+Generating doc/fr/zoomanager/model/package-summary.html...
+Generating doc/fr/zoomanager/model/package-tree.html...
+Generating doc/fr/zoomanager/model/animal/package-summary.html...
+Generating doc/fr/zoomanager/model/animal/package-tree.html...
+Generating doc/fr/zoomanager/model/employee/package-summary.html...
+Generating doc/fr/zoomanager/model/employee/package-tree.html...
+Generating doc/fr/zoomanager/model/enclos/package-summary.html...
+Generating doc/fr/zoomanager/model/enclos/package-tree.html...
+Generating doc/fr/zoomanager/model/financial/package-summary.html...
+Generating doc/fr/zoomanager/model/financial/package-tree.html...
+Generating doc/fr/zoomanager/model/user/package-summary.html...
+Generating doc/fr/zoomanager/model/user/package-tree.html...
+Generating doc/fr/zoomanager/view/package-summary.html...
+Generating doc/fr/zoomanager/view/package-tree.html...
+Generating doc/fr/zoomanager/model/user/class-use/Role.html...
+Generating doc/fr/zoomanager/model/user/class-use/User.html...
+Generating doc/fr/zoomanager/model/enclos/class-use/Enclos.html...
+Generating doc/fr/zoomanager/model/class-use/Zoo.html...
+Generating doc/fr/zoomanager/model/animal/class-use/Pelican.html...
+Generating doc/fr/zoomanager/model/animal/class-use/FlamantRose.html...
+Generating doc/fr/zoomanager/model/animal/class-use/Zebre.html...
+Generating doc/fr/zoomanager/model/animal/class-use/Oiseau.html...
+Generating doc/fr/zoomanager/model/animal/class-use/Animal.html...
+Generating doc/fr/zoomanager/model/animal/class-use/Species.html...
+Generating doc/fr/zoomanager/model/animal/class-use/Mammifere.html...
+Generating doc/fr/zoomanager/model/animal/class-use/Lion.html...
+Generating doc/fr/zoomanager/model/employee/class-use/Employee.html...
+Generating doc/fr/zoomanager/model/employee/class-use/AgentMenage.html...
+Generating doc/fr/zoomanager/model/employee/class-use/Soigneur.html...
+Generating doc/fr/zoomanager/model/financial/class-use/Transaction.html...
+Generating doc/fr/zoomanager/model/financial/class-use/Budget.html...
+Generating doc/fr/zoomanager/model/financial/class-use/TransactionType.html...
+Generating doc/fr/zoomanager/class-use/Main.html...
+Generating doc/fr/zoomanager/view/class-use/ConsoleView.html...
+Generating doc/fr/zoomanager/controller/class-use/ZooController.html...
+Generating doc/fr/zoomanager/package-use.html...
+Generating doc/fr/zoomanager/controller/package-use.html...
+Generating doc/fr/zoomanager/model/package-use.html...
+Generating doc/fr/zoomanager/model/animal/package-use.html...
+Generating doc/fr/zoomanager/model/employee/package-use.html...
+Generating doc/fr/zoomanager/model/enclos/package-use.html...
+Generating doc/fr/zoomanager/model/financial/package-use.html...
+Generating doc/fr/zoomanager/model/user/package-use.html...
+Generating doc/fr/zoomanager/view/package-use.html...
+Generating doc/overview-tree.html...
+Generating doc/index.html...
+Building index for all classes...
+Generating doc/allclasses-index.html...
+Generating doc/allpackages-index.html...
+Generating doc/index-all.html...
+Generating doc/overview-summary.html...
+Generating doc/help-doc.html...
+100 warnings

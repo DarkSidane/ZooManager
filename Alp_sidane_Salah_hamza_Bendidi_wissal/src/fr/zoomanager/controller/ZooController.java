@@ -11,12 +11,34 @@ import java.util.stream.Collectors;
 import java.util.Optional;
 import java.util.List;
 
+/**
+ * Contrôleur principal de l'application.
+ * Gère la logique de l'application et coordonne les interactions entre la vue et le modèle.
+ * Implémente les différentes fonctionnalités selon le rôle de l'utilisateur connecté.
+ * 
+ * @see Zoo
+ * @see ConsoleView
+ * @see User
+ */
 public class ZooController {
+    /** Instance du zoo (modèle) */
     private Zoo zoo;
+    
+    /** Interface utilisateur (vue) */
     private ConsoleView view;
+    
+    /** État de l'application */
     private boolean running;
+    
+    /** Utilisateur actuellement connecté */
     private User currentUser;
 
+    /**
+     * Constructeur du contrôleur.
+     * 
+     * @param zoo Le modèle du zoo
+     * @param view L'interface utilisateur
+     */
     public ZooController(Zoo zoo, ConsoleView view) {
         this.zoo = zoo;
         this.view = view;
@@ -24,6 +46,10 @@ public class ZooController {
         initializeZoo();
     }
 
+    /**
+     * Initialise le zoo avec des données de test.
+     * Crée des enclos, des animaux et des employés pour démonstration.
+     */
     private void initializeZoo() {
         Enclos savane = new Enclos("Savane", 5);
         Enclos voliere = new Enclos("Volière", 3);
@@ -56,6 +82,10 @@ public class ZooController {
         );
     }
 
+    /**
+     * Lance l'application.
+     * Boucle principale gérant les interactions utilisateur.
+     */
     public void start() {
         while (running) {
             if (currentUser == null) {
@@ -69,6 +99,10 @@ public class ZooController {
         }
     }
 
+    /**
+     * Gère la connexion des utilisateurs.
+     * Permet de se connecter en tant que directeur ou employé.
+     */
     private void handleLogin() {
         view.displayLoginMenu();
         String choice = view.getUserInput();
@@ -92,6 +126,10 @@ public class ZooController {
         }
     }
 
+    /**
+     * Gère la connexion des employés.
+     * Affiche la liste des employés et permet de sélectionner un employé pour se connecter.
+     */
     private void handleEmployeeLogin() {
         view.displayEmployeeLoginMenu(zoo.getEmployees());
         try {
@@ -110,6 +148,12 @@ public class ZooController {
         }
     }
 
+    /**
+     * Gère les actions selon le rôle de l'utilisateur.
+     * Délègue aux méthodes spécifiques selon le choix.
+     * 
+     * @param choice Le choix de l'utilisateur
+     */
     private void processMainMenuChoice(String choice) {
         switch (currentUser.getRole()) {
             case DIRECTEUR:
@@ -124,6 +168,11 @@ public class ZooController {
         }
     }
 
+    /**
+     * Traite les actions du directeur.
+     * 
+     * @param choice Le choix du directeur
+     */
     private void processDirecteurChoice(String choice) {
         switch (choice) {
             case "1":
@@ -146,6 +195,11 @@ public class ZooController {
         }
     }
 
+    /**
+     * Traite les actions du soigneur.
+     * 
+     * @param choice Le choix du soigneur
+     */
     private void processSoigneurChoice(String choice) {
         switch (choice) {
             case "1":
@@ -165,6 +219,11 @@ public class ZooController {
         }
     }
 
+    /**
+     * Traite les actions de l'agent de ménage.
+     * 
+     * @param choice Le choix de l'agent de ménage
+     */
     private void processAgentMenageChoice(String choice) {
         switch (choice) {
             case "1":
@@ -181,6 +240,10 @@ public class ZooController {
         }
     }
 
+    /**
+     * Gère le menu des enclos.
+     * Permet d'afficher, créer et nettoyer les enclos.
+     */
     private void handleEnclosMenu() {
         boolean enclosMenuRunning = true;
         while (enclosMenuRunning) {
@@ -205,6 +268,9 @@ public class ZooController {
         }
     }
 
+    /**
+     * Crée un nouvel enclos.
+     */
     private void createNewEnclos() {
         view.displayMessage("Nom de l'enclos : ");
         String name = view.getUserInput();
@@ -222,6 +288,9 @@ public class ZooController {
         }
     }
 
+    /**
+     * Nettoie un enclos.
+     */
     private void cleanEnclos() {
         if (currentUser.getRole() != Role.AGENT_MENAGE && currentUser.getRole() != Role.DIRECTEUR) {
             view.displayError("Vous n'avez pas les droits pour effectuer cette action");
@@ -248,6 +317,10 @@ public class ZooController {
         }
     }
 
+    /**
+     * Gère le menu des animaux.
+     * Permet d'afficher, créer, nourrir et soigner les animaux.
+     */
     private void handleAnimalMenu() {
         boolean animalMenuRunning = true;
         while (animalMenuRunning) {
@@ -275,6 +348,9 @@ public class ZooController {
         }
     }
 
+    /**
+     * Affiche tous les animaux du zoo.
+     */
     private void displayAllAnimals() {
         for (Enclos enclos : zoo.getEnclos()) {
             view.displayMessage("\nEnclos : " + enclos.getName());
@@ -284,6 +360,9 @@ public class ZooController {
         }
     }
 
+    /**
+     * Crée un nouvel animal.
+     */
     private void createNewAnimal() {
         if (currentUser.getRole() != Role.DIRECTEUR) {
             view.displayError("Seul le directeur peut ajouter des animaux");
@@ -360,6 +439,9 @@ public class ZooController {
         }
     }
 
+    /**
+     * Nourrit un animal.
+     */
     private void feedAnimal() {
         if (!(currentUser.getEmployee() instanceof Soigneur)) {
             view.displayError("Vous devez être un soigneur pour effectuer cette action");
@@ -412,6 +494,9 @@ public class ZooController {
         }
     }
 
+    /**
+     * Soigne un animal.
+     */
     private void healAnimal() {
         if (!(currentUser.getEmployee() instanceof Soigneur)) {
             view.displayError("Vous devez être un soigneur pour effectuer cette action");
@@ -464,6 +549,10 @@ public class ZooController {
         }
     }
 
+    /**
+     * Gère le menu des employés.
+     * Permet d'afficher, créer et assigner des enclos aux employés.
+     */
     private void handleEmployeeMenu() {
         boolean employeeMenuRunning = true;
         while (employeeMenuRunning) {
@@ -488,6 +577,9 @@ public class ZooController {
         }
     }
 
+    /**
+     * Crée un nouvel employé.
+     */
     private void createNewEmployee() {
         if (currentUser.getRole() != Role.DIRECTEUR) {
             view.displayError("Seul le directeur peut créer des employés");
@@ -541,6 +633,9 @@ public class ZooController {
         }
     }
 
+    /**
+     * Assigner un enclos à un employé.
+     */
     private void assignEnclosToEmployee() {
         if (currentUser.getRole() != Role.DIRECTEUR) {
             view.displayError("Seul le directeur peut assigner des enclos");
