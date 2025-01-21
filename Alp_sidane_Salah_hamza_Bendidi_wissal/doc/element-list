@@ -1,0 +1,9 @@
+fr.zoomanager
+fr.zoomanager.controller
+fr.zoomanager.model
+fr.zoomanager.model.animal
+fr.zoomanager.model.employee
+fr.zoomanager.model.enclos
+fr.zoomanager.model.financial
+fr.zoomanager.model.user
+fr.zoomanager.view
