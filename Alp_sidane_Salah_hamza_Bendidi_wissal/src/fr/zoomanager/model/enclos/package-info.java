@@ -4,11 +4,11 @@
  * <p>Définit la structure et la gestion des espaces hébergeant les animaux.
  * Chaque enclos a une capacité maximale et un niveau de propreté à maintenir.</p>
  * 
- * <p>Interagit avec :
+ * <p>Interagit avec :</p>
  * <ul>
  *     <li>animal : Pour héberger les animaux</li>
  *     <li>employee : Pour l'entretien par les agents</li>
- * </ul></p>
+ * </ul>
  * 
  * @author Sidane Alp
  * @author Hamza Salah

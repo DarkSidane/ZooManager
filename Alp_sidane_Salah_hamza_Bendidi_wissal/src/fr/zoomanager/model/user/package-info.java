@@ -1,11 +1,11 @@
 /**
  * Package gérant les utilisateurs et les rôles du système.
  * 
- * <p>Définit :
+ * <p>Définit :</p>
  * <ul>
  *     <li>Les différents rôles (Directeur, Soigneur, Agent de ménage)</li>
  *     <li>La gestion des utilisateurs et leurs permissions</li>
- * </ul></p>
+ * </ul>
  * 
  * <p>Utilisé par le contrôleur pour gérer les accès et les droits
  * aux différentes fonctionnalités du système.</p>

@@ -1,21 +1,15 @@
-#!/bin/bash
-
-# Création des dossiers nécessaires
-mkdir -p src/fr/zoomanager/{controller,model/{animal,employee,enclos,financial,user},view}
-
-# Package principal fr.zoomanager
-cat > src/fr/zoomanager/package-info.java << 'EOL'
+# Package model.enclos
+cat > src/fr/zoomanager/model/enclos/package-info.java << 'EOL'
 /**
- * Package principal de l'application ZooManager.
+ * Package gérant les enclos du zoo.
  * 
- * <p>Ce package contient l'architecture MVC complète pour la gestion d'un zoo,
- * permettant de gérer les animaux, les employés, les enclos et les finances.</p>
+ * <p>Définit la structure et la gestion des espaces hébergeant les animaux.
+ * Chaque enclos a une capacité maximale et un niveau de propreté à maintenir.</p>
  * 
- * <p>L'application est structurée en plusieurs sous-packages :</p>
+ * <p>Interagit avec :</p>
  * <ul>
- *     <li>controller : Gestion des interactions et de la logique applicative</li>
- *     <li>model : Données métier et logique business</li>
- *     <li>view : Interface utilisateur en mode console</li>
+ *     <li>animal : Pour héberger les animaux</li>
+ *     <li>employee : Pour l'entretien par les agents</li>
  * </ul>
  * 
  * @author Sidane Alp
@@ -24,23 +18,23 @@ cat > src/fr/zoomanager/package-info.java << 'EOL'
  * @version 1.0
  * @since 22/01/2025
  */
-package fr.zoomanager;
+package fr.zoomanager.model.enclos;
 EOL
 
-# Package controller
-cat > src/fr/zoomanager/controller/package-info.java << 'EOL'
+# Package model.financial
+cat > src/fr/zoomanager/model/financial/package-info.java << 'EOL'
 /**
- * Package contenant les contrôleurs de l'application.
+ * Package gérant les aspects financiers du zoo.
  * 
- * <p>Gère la logique de contrôle entre la vue et le modèle,
- * en implémentant le pattern MVC. Le contrôleur principal ZooController
- * coordonne toutes les interactions entre l'utilisateur et le système.</p>
- * 
- * <p>Interactions :</p>
+ * <p>Gère :</p>
  * <ul>
- *     <li>Utilise fr.zoomanager.view pour l'interface utilisateur</li>
- *     <li>Manipule fr.zoomanager.model pour la logique métier</li>
+ *     <li>Le budget global</li>
+ *     <li>Les transactions (entrées/sorties)</li>
+ *     <li>Les rapports financiers</li>
  * </ul>
+ * 
+ * <p>Utilisé par tous les autres packages pour le suivi des coûts
+ * (nourriture, soins, salaires, entretien, etc.)</p>
  * 
  * @author Sidane Alp
  * @author Hamza Salah
@@ -48,24 +42,22 @@ cat > src/fr/zoomanager/controller/package-info.java << 'EOL'
  * @version 1.0
  * @since 22/01/2025
  */
-package fr.zoomanager.controller;
+package fr.zoomanager.model.financial;
 EOL
 
-# Package model
-cat > src/fr/zoomanager/model/package-info.java << 'EOL'
+# Package model.user
+cat > src/fr/zoomanager/model/user/package-info.java << 'EOL'
 /**
- * Package contenant le modèle de données du zoo.
+ * Package gérant les utilisateurs et les rôles du système.
  * 
- * <p>Contient la classe principale Zoo ainsi que tous les sous-packages
- * représentant les différentes entités du système :</p>
- * 
+ * <p>Définit :</p>
  * <ul>
- *     <li>animal : Gestion des différentes espèces d'animaux</li>
- *     <li>employee : Gestion du personnel</li>
- *     <li>enclos : Gestion des espaces pour les animaux</li>
- *     <li>financial : Gestion du budget et des transactions</li>
- *     <li>user : Gestion des utilisateurs et des rôles</li>
+ *     <li>Les différents rôles (Directeur, Soigneur, Agent de ménage)</li>
+ *     <li>La gestion des utilisateurs et leurs permissions</li>
  * </ul>
+ * 
+ * <p>Utilisé par le contrôleur pour gérer les accès et les droits
+ * aux différentes fonctionnalités du système.</p>
  * 
  * @author Sidane Alp
  * @author Hamza Salah
@@ -73,22 +65,24 @@ cat > src/fr/zoomanager/model/package-info.java << 'EOL'
  * @version 1.0
  * @since 22/01/2025
  */
-package fr.zoomanager.model;
+package fr.zoomanager.model.user;
 EOL
 
-# Package model.animal
-cat > src/fr/zoomanager/model/animal/package-info.java << 'EOL'
+# Package view
+cat > src/fr/zoomanager/view/package-info.java << 'EOL'
 /**
- * Package gérant les différentes espèces d'animaux du zoo.
+ * Package contenant l'interface utilisateur du zoo.
  * 
- * <p>Implémente une hiérarchie de classes d'animaux avec :</p>
+ * <p>Implémente une interface en ligne de commande avec :</p>
  * <ul>
- *     <li>Une classe abstraite Animal</li>
- *     <li>Des classes abstraites intermédiaires (Mammifere, Oiseau)</li>
- *     <li>Des implémentations concrètes (Lion, Zebre, Pelican, FlamantRose)</li>
+ *     <li>Menus interactifs</li>
+ *     <li>Affichage coloré</li>
+ *     <li>Gestion des entrées utilisateur</li>
+ *     <li>Messages d'état et d'erreur</li>
  * </ul>
  * 
- * <p>Chaque animal possède ses propres caractéristiques et comportements.</p>
+ * <p>Communique avec le contrôleur pour traiter les actions utilisateur
+ * et afficher les résultats.</p>
  * 
  * @author Sidane Alp
  * @author Hamza Salah
@@ -96,32 +90,7 @@ cat > src/fr/zoomanager/model/animal/package-info.java << 'EOL'
  * @version 1.0
  * @since 22/01/2025
  */
-package fr.zoomanager.model.animal;
+package fr.zoomanager.view;
 EOL
 
-# Package model.employee
-cat > src/fr/zoomanager/model/employee/package-info.java << 'EOL'
-/**
- * Package gérant le personnel du zoo.
- * 
- * <p>Définit les différents types d'employés et leurs responsabilités :</p>
- * <ul>
- *     <li>Soigneur : S'occupe des soins aux animaux</li>
- *     <li>Agent de ménage : Gère la propreté des enclos</li>
- * </ul>
- * 
- * <p>Interagit avec les packages :</p>
- * <ul>
- *     <li>animal : Pour les soins aux animaux</li>
- *     <li>enclos : Pour l'entretien des espaces</li>
- * </ul>
- * 
- * @author Sidane Alp
- * @author Hamza Salah
- * @author Wissal Bendidi
- * @version 1.0
- * @since 22/01/2025
- */
-package fr.zoomanager.model.employee;
-EOL
-
+echo "✅ Fichiers package-info.java mis à jour avec succès !"
