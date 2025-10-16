@@ -372,6 +372,62 @@ L'application suit un pattern **d'architecture MVC** propre :
 
 ---
 
+### 📺 Aperçu de l'application
+
+#### Connexion et Menu Principal
+
+```
+=== 🔑 CONNEXION ===
+1. 👨‍💼 Se connecter en tant que directeur
+2. 👤 Se connecter en tant qu'employé
+3. 🚪 Quitter
+Votre choix : > 1
+
+=== 👨‍💼 Connecté en tant que Directeur (Role: Directeur) ===
+
+=== 👨‍💼 MENU DIRECTEUR ===
+1. 🏠 Gérer les enclos
+2. 🦁 Gérer les animaux
+3. 👥 Gérer les employés
+4. 💰 Voir les finances
+5. 🚪 Se déconnecter
+Votre choix : > 2
+```
+
+#### Gestion des Animaux
+
+```
+=== 🦁 GESTION DES ANIMAUX ===
+1. 👁️ Voir tous les animaux
+2. ➕ Ajouter un animal
+3. 🍽️ Nourrir un animal
+4. 💊 Soigner un animal
+5. ↩️ Retour
+Votre choix : > 1
+
+✅
+Enclos : Savane
+✅ - Simba - Santé: 100,0%, Faim: 5,0%, Alpha: Oui, Taille du groupe: 4
+✅ - Marty - Santé: 100,0%, Faim: 5,0%
+
+Enclos : Volière
+✅ - Rico - Santé: 100,0%, Faim: 5,0%
+✅ - Flamby - Santé: 100,0%, Faim: 5,0%
+```
+
+#### Rapport Financier
+
+```
+Votre choix : > 4
+
+=== Rapport financier ===
+Balance actuelle: 10000,00€
+Dernières transactions:
+[16/10/2025 13:41] +€10000,00€ - Budget initial
+```
+
+---
+
 ### 📖 Guide d'utilisation
 
 #### 👔 Rôle Directeur
